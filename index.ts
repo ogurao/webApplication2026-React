@@ -34,3 +34,9 @@ app.get('/', (req: Request, res: Response): void => {
 app.listen(port, (): void => {
   console.log(`Server started: http://localhost:${port}`);
 });
+
+
+// 「/sample」にアクセスされたときの処理
+app.get('/sample', (req: Request, res: Response): void => {
+  res.render('sample.ejs');
+});
